@@ -21,7 +21,8 @@ let package = Package(
     targets: [
         .target(
             name: "DP3TSDK",
-            dependencies: ["SwiftJWT", "ZIPFoundation"]
+            dependencies: ["SwiftJWT", "ZIPFoundation"],
+            swiftSettings: [SwiftSetting.unsafeFlags(["-gnone"])]
         ),
         .testTarget(
             name: "DP3TSDKTests",
